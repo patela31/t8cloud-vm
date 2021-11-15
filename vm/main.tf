@@ -137,11 +137,6 @@ source_image_reference {
     admin_password = "Santos10Santos10"
     disable_password_authentication = false
 
-    admin_ssh_key {
-        username       = "attila10"
-    #    public_key     = file("~/.ssh/id_rsa.pub")
-        public_key     = tls_private_key.example_ssh.public_key_openssh
-    }
 
     boot_diagnostics {
         storage_account_uri = azurerm_storage_account.mystorageaccount.primary_blob_endpoint
